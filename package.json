@@ -1,0 +1,15 @@
+{
+  "name": "alpine-crash-course",
+  "version": "1.0.0",
+  "description": "Example project for NetNinja Alpine.js crash course",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src -p 3000"
+  },
+  "keywords": [],
+  "author": "Peter Bessenyei",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

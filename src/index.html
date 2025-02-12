@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js Crash Course</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <form x-data="signupForm">
+        <h1>Ninja Signup Form</h1>
+
+        <!-- username -->
+        <div class="form-field">
+            <p class="hint" x-bind:class="{ 'warning': username.length > 10 }">
+                <span x-text="15 - username.length"></span>
+                characters remaining
+            </p>
+            <label>
+                <span>Username:</span>
+                <input type="text" maxlength="15" x-model="username">
+                <div x-text="username"></div>
+            </label>
+        </div>
+
+        <!-- password -->
+        <div class="form-field password">
+            <label>
+                <span>Password:</span>
+                <input type="password" x-model="password">
+                <div x-text="password"></div>
+            </label>
+        </div>
+
+        <!-- confirm password -->
+        <div class="form-field">
+            <label>
+                <span>Confirm Password:</span>
+                <input type="password" x-model="passwordConfirm">
+                <div x-text="passwordConfirm"></div>
+            </label>
+        </div>
+
+        <!-- belt color -->
+        <div class="form-field">
+            <label>Belt Color:
+                <select x-model="belt">
+                    <option value="">Select a belt</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="brown">Brown</option>
+                </select>
+                <div x-text="belt"></div>
+            </label>
+        </div>
+
+        <!-- short bio -->
+        <div class="form-field">
+            <p class="hint" x-bind:class="{ 'warning': bio.length > 90 }">
+                <span x-text="100 - bio.length"></span>
+                characters remaining
+            </p>
+            <label>
+                <span>Short Bio:</span>
+                <textarea maxlength="100" x-model="bio"></textarea>
+                <div x-text="bio"></div>
+            </label>
+        </div>
+
+        <!-- newsletter signup -->
+        <div class="form-field newsletter">
+            <label>
+                <input type="checkbox" x-model="newsletter">
+                <span>Sign up for the newsletter</span>
+                <div x-text="newsletter"></div>
+            </label>
+        </div>
+
+        <!-- submit button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
