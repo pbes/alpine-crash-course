@@ -12,7 +12,7 @@
 
 <body>
 
-    <form x-data="signupForm">
+    <form x-data="signupForm" @submit.prevent="submitForm">
         <h1>Ninja Signup Form</h1>
 
         <!-- username -->

@@ -5,6 +5,17 @@ document.addEventListener('alpine:init', () => {
         passwordConfirm: '',
         belt: '',
         bio: '',
-        newsletter: true
+        newsletter: true,
+
+        submitForm() {
+            console.log({
+                username: this.username,
+                password: this.password,
+                passwordConfirm: this.passwordConfirm,
+                belt: this.belt,
+                bio: this.bio,
+                newsletter: this.newsletter
+            });
+        }
     }));
 });
