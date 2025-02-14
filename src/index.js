@@ -7,6 +7,8 @@ document.addEventListener('alpine:init', () => {
         bio: '',
         newsletter: true,
 
+        showPassword: false,
+
         submitForm() {
             console.log({
                 username: this.username,

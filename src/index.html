@@ -32,9 +32,13 @@
         <div class="form-field password">
             <label>
                 <span>Password:</span>
-                <input type="password" x-model="password">
+                <input x-bind:type="showPassword ? 'text' : 'password'" x-model="password">
                 <div x-text="password"></div>
             </label>
+
+            <button type="button" @click="showPassword = !showPassword">
+                <span x-text="showPassword ? 'Hide' : 'Show'"></span> Password
+            </button>
         </div>
 
         <!-- confirm password -->
