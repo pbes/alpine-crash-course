@@ -24,7 +24,6 @@
             <label>
                 <span>Username:</span>
                 <input type="text" maxlength="15" x-model="username">
-                <div x-text="username"></div>
             </label>
         </div>
 
@@ -33,7 +32,6 @@
             <label>
                 <span>Password:</span>
                 <input x-bind:type="showPassword ? 'text' : 'password'" x-model="password">
-                <div x-text="password"></div>
             </label>
 
             <button type="button" @click="showPassword = !showPassword">
@@ -46,7 +44,6 @@
             <label>
                 <span>Confirm Password:</span>
                 <input type="password" x-model="passwordConfirm">
-                <div x-text="passwordConfirm"></div>
             </label>
         </div>
 
@@ -61,7 +58,6 @@
                     <option value="orange">Orange</option>
                     <option value="brown">Brown</option>
                 </select>
-                <div x-text="belt"></div>
             </label>
         </div>
 
@@ -74,7 +70,6 @@
             <label>
                 <span>Short Bio:</span>
                 <textarea maxlength="100" x-model="bio"></textarea>
-                <div x-text="bio"></div>
             </label>
         </div>
 
@@ -83,7 +78,6 @@
             <label>
                 <input type="checkbox" x-model="newsletter">
                 <span>Sign up for the newsletter</span>
-                <div x-text="newsletter"></div>
             </label>
         </div>
 
