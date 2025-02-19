@@ -7,6 +7,14 @@ document.addEventListener('alpine:init', () => {
         bio: '',
         newsletter: true,
 
+        beltColors: [
+            { value: 'black', label: 'Black' },
+            { value: 'white', label: 'White' },
+            { value: 'red', label: 'Red' },
+            { value: 'orange', label: 'Orange' },
+            { value: 'brown', label: 'Brown' }
+        ],
+
         showPassword: false,
         errors: {},
 
