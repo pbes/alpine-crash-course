@@ -153,3 +153,8 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
+
+[x-cloak] {
+    display: none !important;
+}
+/** To prevent showing the modal on page load */

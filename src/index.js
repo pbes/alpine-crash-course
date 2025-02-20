@@ -17,6 +17,7 @@ document.addEventListener('alpine:init', () => {
 
         showPassword: false,
         errors: {},
+        success: false,
 
         validateForm() {
             this.errors = {};
@@ -76,7 +77,7 @@ document.addEventListener('alpine:init', () => {
             });
 
             $event.target.reset();
-            
+            this.success = true;
         }
     }));
 });
