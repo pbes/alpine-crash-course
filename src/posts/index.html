@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js lifecycle demo</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <div x-data="demo">
+
+        <!-- fetching data with init -->
+        <div>
+            <h3>Posts:</h3>
+            <ul>
+                <template x-for="post in posts" :key="post.id">
+                    <li x-text="post.title"></li>
+                </template>
+            </ul>
+        </div>
+
+        <!-- $watch example -->
+        <div>
+            <h3>Change the background:</h3>
+            <select x-model="bg">
+                <option value="">Select a background color</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+                <option value="pink">Pink</option>
+                <option value="brown">Brown</option>
+                <option value="gray">Gray</option>
+                <option value="black">Black</option>
+                <option value="white">White</option>
+            </select></select>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
